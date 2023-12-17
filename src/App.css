@@ -49,33 +49,21 @@
 }
 
 @font-face {
-    font-family: Teko;
-    src: url("../src/assets/fonts/Teko.ttf");
+    font-family: at;
+    src: url("../src/assets/fonts/atwriter.ttf");
 }
 @font-face {
-    font-family: Lucidity;
-    src: url("../src/assets/fonts/Lucidity.ttf");
+    font-family: hammk;
+    src: url("../src/assets/fonts/hammk.TTF");
 }
 @font-face {
-    font-family: Chau;
-    src: url("../src/assets/fonts/Chau.ttf");
+    font-family: machine;
+    src: url("../src/assets/fonts/machine.ttf");
 }
 
-/* @font-face {
-font-family: Montserrat;
-src: url("../public/fonts/Montserrat-SemiBold.ttf") ;
-font-weight: 200 400;
-} */
-
 @font-face {
-    font-family: Teko;
-    src: url("../src/assets/fonts/Teko.ttf");
-    font-weight: bold;
-}
-@font-face {
-    font-family: Abibas;
-    src: url("../src/assets/fonts/Abibas.ttf");
-    font-weight: bold;
+    font-family: space;
+    src: url("../src/assets/fonts/space.ttf");
 }
 
 form {
@@ -101,6 +89,7 @@ section {
 
 .MuiBox-root {
     display: flex;
+    flex-direction: column;
 }
 
 img {
@@ -108,5 +97,4 @@ img {
 }
 
 .MuiBox-root {
-    flex-direction: column;
 }
