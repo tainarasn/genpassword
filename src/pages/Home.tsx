@@ -1,6 +1,5 @@
-import Skeleton from "@mui/material/Skeleton"
 import Box from "@mui/material/Box"
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { SxProps, Checkbox, FormGroup, FormControlLabel, Button } from "@mui/material"
 import { IconCopy, IconArrowRight, IconRefresh } from "@tabler/icons-react"
 import { colors } from "../styles/colors"
@@ -26,7 +25,6 @@ const label_check: SxProps = {
 }
 export const Home: React.FC<HomeProps> = ({}) => {
     const clipboard = useClipboard()
-    const [loading, setLoading] = useState(true)
 
     const [password, setPassword] = useState("")
     const [value, setValue] = useState(6)
@@ -54,7 +52,7 @@ export const Home: React.FC<HomeProps> = ({}) => {
         setPassword(newPassword)
     }
 
-    const { getStrengthColor, getStrengthLabel } = useStrong(password)
+    const {  getStrengthLabel } = useStrong(password)
     const strongify = getStrengthLabel()
     return (
         <Box sx={{ height: "100%", width: "100%", alignItems: "center", justifyContent: "center", gap: "1vw" }}>
