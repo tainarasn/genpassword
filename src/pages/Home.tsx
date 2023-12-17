@@ -7,6 +7,7 @@ import { colors } from "../styles/colors"
 import { useClipboard } from "@mantine/hooks"
 import { Slider, Tooltip } from "@mantine/core"
 import { usePassword } from "../hooks/usePassword"
+import { useStrong } from "../hooks/useStrong"
 
 interface HomeProps {}
 const box_style: SxProps = {
@@ -53,6 +54,8 @@ export const Home: React.FC<HomeProps> = ({}) => {
         setPassword(newPassword)
     }
 
+    const { getStrengthColor, getStrengthLabel } = useStrong(password)
+    const strongify = getStrengthLabel()
     return (
         <Box sx={{ height: "100%", width: "100%", alignItems: "center", justifyContent: "center", gap: "1vw" }}>
             <p style={{ fontSize: "1.5vw", fontFamily: "machine", letterSpacing: "0.15vw" }}>
@@ -80,7 +83,7 @@ export const Home: React.FC<HomeProps> = ({}) => {
                         <IconCopy
                             style={{ cursor: "pointer" }}
                             color={clipboard.copied ? "white" : colors.primary}
-                            onClick={() => clipboard.copy("DAGhdsF645sgsw!@n")}
+                            onClick={() => clipboard.copy(password)}
                         />
                     </Tooltip>
                 </Box>
@@ -160,8 +163,75 @@ export const Home: React.FC<HomeProps> = ({}) => {
                         />
                     </FormGroup>
                 </Box>
-                <Box sx={{ bgcolor: "#1b1b1b", width: "100%", height: "15%", borderRadius: "0.3vw", p: "1vw" }}>
-                    <p style={{ fontFamily: "space" }}>Strong Password</p>
+                <Box
+                    sx={{
+                        bgcolor: "#1b1b1b",
+                        width: "100%",
+                        height: "15%",
+                        borderRadius: "0.3vw",
+                        p: "1vw",
+                        flexDirection: "row",
+
+                        justifyContent: "space-between",
+                        alignItems: "centerl",
+                    }}
+                >
+                    <p style={{ fontFamily: "space", width: "48%", fontSize: "1vw" }}>Strong Password</p>
+                    <Box
+                        sx={{
+                            flexDirection: "row",
+                            width: "65%",
+                            alignItems: "center",
+                            justifyContent: "flex-end",
+                            gap: "0.3vw",
+                        }}
+                    >
+                        <h4 style={{ fontFamily: "space", textTransform: "uppercase", width: "60%", textAlign: "end" }}>
+                            {getStrengthLabel()}
+                        </h4>
+                        <Box
+                            sx={{
+                                flexDirection: "row",
+                                width: "3%",
+                                height: "100%",
+                                bgcolor:
+                                    strongify === "Média" || strongify === "Forte" || strongify === "Muito Forte"
+                                        ? "red"
+                                        : "red",
+                                borderRadius: "0.2vw",
+                            }}
+                        />
+                        <Box
+                            sx={{
+                                flexDirection: "row",
+                                width: "3%",
+                                height: "100%",
+                                bgcolor:
+                                    strongify === "Média" || strongify === "Forte" || strongify === "Muito Forte"
+                                        ? "red"
+                                        : "#2b2b2c",
+                                borderRadius: "0.2vw",
+                            }}
+                        />
+                        <Box
+                            sx={{
+                                flexDirection: "row",
+                                width: "3%",
+                                height: "100%",
+                                bgcolor: strongify === "Forte" || strongify === "Muito Forte" ? "red" : "#2b2b2c",
+                                borderRadius: "0.2vw",
+                            }}
+                        />
+                        <Box
+                            sx={{
+                                flexDirection: "row",
+                                width: "3%",
+                                height: "100%",
+                                bgcolor: strongify === "Muito Forte" ? "red" : "#2b2b2c",
+                                borderRadius: "0.2vw",
+                            }}
+                        />
+                    </Box>
                 </Box>
                 <Button
                     variant="contained"
