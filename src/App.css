@@ -1,5 +1,5 @@
 #root {
-    max-width: 1280px;
+    /* max-width: 1280px; */
     height: 100%;
     width: 100%;
 }
@@ -96,5 +96,3 @@ img {
     object-fit: contain;
 }
 
-.MuiBox-root {
-}

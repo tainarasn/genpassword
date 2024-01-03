@@ -23,15 +23,18 @@ a:hover {
 }
 
 body {
-    margin: 0;
-    display: flex;
-    place-items: center;
-    min-width: 320px;
-    min-height: 100vh;
-    background-color: black;
-    padding: 2vw;
     height: 100%;
-    font-family: "space";
+    width: 100%;
+    /* /* margin: 0; */
+    display: flex;
+    /* place-items: center;
+    min-width: 320px;
+    min-height: 100vh; */
+    background-color: black;
+    /* padding: 2vw; */
+
+    /* height: 100%;
+    font-family: "space"; */
 }
 
 h1 {
