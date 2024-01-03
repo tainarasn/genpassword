@@ -1,9 +1,9 @@
 {
+    "homepage": "https://tainarasn.github.io/genpassword",
     "name": "password",
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "homepage": "https://tainarasn.github.io/genpassword",
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
