@@ -5,9 +5,11 @@ import { Home } from "./pages/Home"
 interface RoutesProps {}
 
 export const Routes: React.FC<RoutesProps> = ({}) => {
-    return  <ReactRoutes>
-    <Route index element={<Home />} />
-    <Route path="/" element={<Home />} />
-    <Route path="/*" element={<Home />} />
-</ReactRoutes>
+    return (
+        <ReactRoutes>
+            <Route index element={<Home />} />
+            <Route path="/genpassword/" element={<Home />} />
+            <Route path="/genpassword/*" element={<Home />} />
+        </ReactRoutes>
+    )
 }
