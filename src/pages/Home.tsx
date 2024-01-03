@@ -86,8 +86,8 @@ export const Home: React.FC<HomeProps> = ({}) => {
                             letterSpacing: "0.15vw",
                         }}
                     >
-                        <span style={{ color: colors.primary, fontFamily: "machine" }}>P</span>assword{" "}
-                        <span style={{ color: colors.primary, fontFamily: "machine" }}>G</span>enerator
+                        <span style={{ color: colors.primary, fontFamily: "machine" }}>G</span>erador de{" "}
+                        <span style={{ color: colors.primary, fontFamily: "machine" }}>S</span>enhas{" "}
                     </p>
                     <Box
                         sx={{
@@ -122,7 +122,7 @@ export const Home: React.FC<HomeProps> = ({}) => {
                     </Box>
                     <Box sx={{ height: "fit-content", ...box_style, gap: "1vw" }}>
                         <Box sx={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
-                            <h3 style={{ fontFamily: "space" }}>Character Lenght</h3>
+                            <h3 style={{ fontFamily: "space" }}>Tamanho da senha</h3>
                             <h2
                                 style={{ fontFamily: "space", fontSize: "2vw", color: colors.primary, marginRight: "0.5vw" }}
                             >
@@ -155,7 +155,7 @@ export const Home: React.FC<HomeProps> = ({}) => {
                                             inputProps={{ "aria-label": "controlled" }}
                                         />
                                     }
-                                    label="Capital Letter"
+                                    label="Maiúsculas"
                                     sx={label_check}
                                 />
                                 <FormControlLabel
@@ -168,7 +168,7 @@ export const Home: React.FC<HomeProps> = ({}) => {
                                             inputProps={{ "aria-label": "controlled" }}
                                         />
                                     }
-                                    label="Lower Case"
+                                    label="Minúsculas"
                                     sx={label_check}
                                 />
                                 <FormControlLabel
@@ -180,7 +180,7 @@ export const Home: React.FC<HomeProps> = ({}) => {
                                             inputProps={{ "aria-label": "controlled" }}
                                         />
                                     }
-                                    label="Numbers"
+                                    label="Números"
                                     sx={label_check}
                                 />
                                 <FormControlLabel
@@ -192,7 +192,7 @@ export const Home: React.FC<HomeProps> = ({}) => {
                                             inputProps={{ "aria-label": "controlled" }}
                                         />
                                     }
-                                    label="Symbols"
+                                    label="Símbolos"
                                     sx={label_check}
                                 />
                             </FormGroup>
@@ -209,7 +209,7 @@ export const Home: React.FC<HomeProps> = ({}) => {
                                 alignItems: "centerl",
                             }}
                         >
-                            <p style={{ fontFamily: "space", width: "48%", fontSize: "1vw" }}>Strong Password</p>
+                            <p style={{ fontFamily: "space", width: "48%", fontSize: "1vw" }}>Segurança </p>
                             <Box
                                 sx={{
                                     flexDirection: "row",
