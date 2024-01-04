@@ -16,7 +16,7 @@ export const Footer: React.FC<FooterProps> = ({}) => {
             }}
         >
             {" "}
-            TS. Developer Frontend Jr - 2023
+            Challenge by Frontend Mentor. Coded by Tainara Novaes. 2023.
         </Box>
     )
 }
