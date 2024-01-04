@@ -65,6 +65,10 @@
     font-family: space;
     src: url("../src/assets/fonts/space.ttf");
 }
+@font-face {
+    font-family: Teko;
+    src: url("../src/assets/fonts/Teko.ttf");
+}
 
 form {
     display: contents;
@@ -95,4 +99,3 @@ section {
 img {
     object-fit: contain;
 }
-
